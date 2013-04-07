@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"sorter/algorithms/bubblesort"
+	"sorter/algorithms/mergesort"
 	"sorter/algorithms/qsort"
 )
 
@@ -89,6 +90,8 @@ func main() {
 			qsort.QuickSort(values)
 		case "bubblesort":
 			bubblesort.BubbleSort(values)
+		case "mergesort":
+			values = mergesort.MergeSort(values)
 		default:
 			fmt.Println("Sorting algorithm", *algorithm, "is either unknown or unsupported.")
 		}
